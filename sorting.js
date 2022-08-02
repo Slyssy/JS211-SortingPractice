@@ -1003,9 +1003,14 @@ const strNums = [
   '9',
 ];
 
-// Given 1000 digits of PI as strings, return an array of the digits as numbers
+console.log(
+  `Given 1000 digits of PI as strings, return an array of the digits as numbers`
+);
+
 const stringsToNumbs = strNums.map((number) => +number);
 console.log(stringsToNumbs);
+
+console.log(`With the same numbers, find the sum of the even values`);
 
 let sumEvens = stringsToNumbs
   .filter((num) => num % 2 === 0)
@@ -1013,7 +1018,10 @@ let sumEvens = stringsToNumbs
 
 console.log(sumEvens);
 
-// Find the index of the first value when added to it's index = 512 (#ATX!!)
+console.log(
+  `Find the index of the first value when added to it's index = 512 (#ATX!!)`
+);
+
 const atxIdx = stringsToNumbs.findIndex((num, index) => num + index === 512);
 
 console.log(`index: ${atxIdx}, value: ${stringsToNumbs[atxIdx]}`);
@@ -1094,9 +1102,14 @@ const weatherStates = [
   ...new Set(weather.map((object) => object.weather_state_name)),
 ];
 
+console.log(
+  `Using a higher order function, create an array of the unique 'weather_state_name' values of the weather array.`
+);
 console.log(weatherStates);
 
-// //find the id of the object in weather that has a min_temp of 15.915
+console.log(
+  'Find the id of the object in weather that has a min_temp of 15.915'
+);
 
 const minTempOf = weather.find((object) => object.min_temp === 15.915).id;
 
